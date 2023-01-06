@@ -1,0 +1,27 @@
+import java.util.* ;
+import java.io.*; 
+class Solution {
+	
+	public static void main(String args[]) {
+		
+		// Write code here
+         Scanner sc = new Scanner (System.in);
+        int basic = sc.nextInt();
+        double hra = .20 * basic;
+        double da = .50 * basic;
+        double pf = .11 * basic; 
+        int allow;
+        String grade = sc.next();
+        char ch = grade.charAt(0);
+        if (ch == 'A') {
+            allow = 1700;
+        } 
+        else if (ch == 'B') {
+            allow = 1500;
+        } else {
+            allow = 1300;
+        } 
+        double totalSalary = basic + hra + da + allow - pf;                                 System.out.println(Math.round(totalSalary)); 
+		
+	}
+}
